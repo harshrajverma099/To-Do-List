@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-black">
+    <div class="text-white font-harsh font-bold flex justify-center items-center mt-10 text-4xl"> Todo list </div>
+    <div class="h-96 w-96 bg-red-700 mx-auto mt-24 rounded-xl p-2">
+        <div class="w-full flex">
+            <input type="text" id="input" placeholder="Enter Your Task" class="w-4/6 rounded-md font-harsh bg-black text-white caret-white p-1">
+            <button id="addTodoBtn" onclick="addTodo()" class="w-2/6 font-harsh bg-gray-300 rounded-md hover:bg-gray-500 transition-all duration-300 hover:scale-95 hover:text-white active:bg-gray-600 p-1">Add task</button>
+        </div>
+        <div id="list" class="w-full h-80 rounded-md bg-black mt-4 text-white font-harsh overflow-auto p-1">
+
+        </div>
+    </div>
+    <script src="todoapp.js"></script>
+</body>
+</html>
