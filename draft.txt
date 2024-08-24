@@ -1,0 +1,1 @@
+<input type="text" id="input" placeholder="Enter Your Task" class="w-4/6 rounded-md font-harsh bg-black text-white caret-white p-1">

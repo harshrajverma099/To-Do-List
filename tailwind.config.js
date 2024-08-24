@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary: "#3498db",
-        background:"#f5f5f5",
-        accent: "#2ecc71"
+        primary: "#1d1d1d",
+        background:"#3c3c3c",
+        accent: "#4e4f51"
+        
       },
       fontFamily:{
         harsh:['Zilla Slab']

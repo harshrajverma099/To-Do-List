@@ -37,13 +37,17 @@ function deleteTodo(index){
 
 
 function mark(index){
+    let markBtn = document.querySelector(`#markBtn-${index}`)
     let span = document.querySelector(`#span-${index}`)
 
     if(span.style.textDecoration === "line-through"){
         span.style.textDecoration = "none"
+        markBtn.style.backgroundColor = "transparent"
+        
     }
     else{
         span.style.textDecoration = "line-through"
+        markBtn.style.backgroundColor = "red"
     }
 }
 
@@ -80,15 +84,20 @@ function createTodoComponent(todo,index){
     let span = document.createElement("input")
     span.setAttribute("id",`span-${index}`)
     span.className = "edit"
-    span.setAttribute("onclick",`mark(${index})`)
     let buttton2 = document.createElement("button")
     buttton2.setAttribute("id","deleteBtn")
     buttton2.setAttribute("onclick",`deleteTodo(${index})`)
     buttton2.innerHTML = '<i class="fa-solid fa-trash"></i>'
+    let button3 = document.createElement("button")
+    button3.setAttribute("onclick",`mark(${index})`)
+    button3.className = "markBtn"
+    button3.setAttribute("id",`markBtn-${index}`)
+    button3.innerHTML = '<i class="fa-solid fa-check"></i>'
     span.readOnly = true; 
     span.value = `${index + 1}. ` + todo.title
-    // span.disabled = true;
+
     div.appendChild(span)
+    div2.appendChild(button3)
     div2.appendChild(button)
     div2.appendChild(buttton2)
     div.appendChild(div2)
